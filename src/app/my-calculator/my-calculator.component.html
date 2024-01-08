@@ -1,0 +1,19 @@
+<p>Test. my-calculator works!</p>
+
+<ng-container *ngFor="let group of calcGroups">
+
+
+  <div class="calculator">
+    <input type="number" class="calculator__input" [(ngModel)]="group.first.value"/>
+    <select [(ngModel)]="group.operation">
+      <option [value]="choice.value" *ngFor="let choice of calcOperations | keyvalue">
+        {{ choice.value }}
+      </option>
+    </select>
+    <input type="number" class="calculator__input" [(ngModel)]="group.second.value"/>
+
+    <span class="calculator__result">{{ result ?? 'Нажмите вычислить' }}</span>
+
+    <button (click)="calculate()">Вычислить</button>
+  </div>
+</ng-container>
