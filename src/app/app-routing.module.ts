@@ -14,6 +14,14 @@ const routes: Routes = [
     component: MyCalculatorComponent,
   },
   {
+    path: 'objects-list',
+    loadChildren: () => import("./objects-list/objects-list.module").then((m) => m.ObjectsListModule)
+  },
+  {
+    path: 'directives',
+    loadChildren: () => import("./derective/directives/directives.module").then((m) => m.DirectivesModule)
+  },
+  {
     path: '**',
     component: MyEmptyPage
   }
