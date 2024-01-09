@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {MyCalculatorComponent} from "./my-calculator/my-calculator.component";
 import {MyEmptyPage} from "./empty-route/my-empty-page.component";
+import {ParentComponent} from "./lifecycle/parent/parent.component";
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'directives',
     loadChildren: () => import("./derective/directives/directives.module").then((m) => m.DirectivesModule)
+  },
+  {
+    path: 'lifecycles',
+    component: ParentComponent
   },
   {
     path: '**',
