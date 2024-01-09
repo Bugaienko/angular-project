@@ -1,0 +1,70 @@
+<h2>Directives Component</h2>
+
+<div class="section">
+  <h4>Атрибутная директива</h4>
+  <h2 [ChangeColor]="colors">Directive in work</h2>
+</div>
+
+<div class="section">
+  <h4>Структурная директива</h4>
+  <span *myIf="isShow">isShow = {{isShow}}</span>
+  <br>
+  <button (click)="isShow = !isShow" class="btn1">Change isShow</button>
+</div>
+
+
+<div class="section">
+  <span *ngFor="
+  let color of colors;
+  let i = index;
+  let first = first;
+  let last = last;
+  let count = count"
+  >
+   {{ color }} | index= {{ i }}; first-> {{ first }}; last-> {{ last }};  count={{ count }} <br>
+  </span>
+</div>
+
+<!--Angular 17-->
+<!--@for (color of colors; track color) {-->
+<!--<div>-->
+<!--  <span> {{ color }} </span>-->
+<!--</div>-->
+<!--} -->
+
+<div class="section">
+  <span *ngIf="isShow; else emptyState"> {{ isShow }} Спан отображается, так как значение true</span>
+</div>
+
+<div class="section">
+  <ng-template #emptyState>
+    <span>Я вывелся, как else вариант ({{ isShow }})</span>
+  </ng-template>
+
+  <button (click)="isShow = !isShow">Change isShow на {{ !isShow }}</button>
+</div>
+
+<div class="section">
+  <ng-container *ngFor="let color of colors">
+    <div>
+      <button class="btn1" (click)="currentColor = color">{{ color }}</button>
+    </div>
+  </ng-container>
+
+  <div [ngSwitch]="currentColor">
+    <span *ngSwitchCase="'red'">Красный</span>
+    <span *ngSwitchCase="'yellow'">Желтый</span>
+    <span *ngSwitchCase="'blue'">Синий</span>
+    <span *ngSwitchDefault>Дефолтный </span>
+  </div>
+</div>
+
+
+<div class="section">
+  <span [ngStyle]="elementStyle"> Я текст, измененный ngStyle</span>
+</div>
+
+<!--// Добавляет класс-->
+<div class="section">
+  <span [ngClass]="['section', 'active']">Спан с классом</span>
+</div>
