@@ -22,4 +22,9 @@ export class PostService {
   public getPosts(): Observable<Post[]> {
     return this._httpClient.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
   }
+
+  public getPostById(id: number): Observable<Post> {
+     return this._httpClient.get<Post>('https://jsonplaceholder.typicode.com/posts/' + id );
+
+  }
 }

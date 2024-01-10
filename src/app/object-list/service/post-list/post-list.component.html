@@ -8,6 +8,7 @@
     <div class="post">
       <span class="post__title">{{post.title}}</span>
       <span class="post__content">{{post.body}}</span>
+      <button (click)="redirectTo(post.id)">Info</button>
     </div>
   }
 }

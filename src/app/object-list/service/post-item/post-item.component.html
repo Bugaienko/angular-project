@@ -1,1 +1,15 @@
 <p>post-item works!</p>
+
+<div class="container">
+  <div>
+    @if (post$ | async; as post) {
+      <div class="post">
+        <span class="post__title">{{ post.title }}</span>
+        <span class="post__content">{{ post.body }}</span>
+        <span class="post__author">Author id: {{ post.userId }}</span>
+        <button [routerLink]="['/requests']">Back</button>
+      </div>
+    }
+  </div>
+
+</div>

@@ -23,8 +23,14 @@ const routes: Routes = [
     path: 'directives',
     loadChildren: () => import("./derective/directives/directives.module").then((m) => m.DirectivesModule)
   },
+
   {
     path: 'requests',
+    loadChildren: () => import("./object-list/service/request/request.module").then((m) => m.RequestModule)
+
+  },
+  {
+    path: 'requests_old',
     component: PostListComponent
   },
   {
