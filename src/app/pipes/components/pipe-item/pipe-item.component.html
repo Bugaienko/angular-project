@@ -1,0 +1,32 @@
+<div class="pipes">
+
+<!--  <span>{{ name }}</span>-->
+<!--  <span *ngIf="name.length > 3">Больше 3</span>-->
+
+  <span>{{ name | uppercase | myCustom}}</span>
+  <br/>
+
+  <span>{{ surname | titlecase }}</span>
+  <br/>
+
+  <span>{{ surname | lowercase }}</span>
+  <br/>
+
+  <span>{{ surname |  lowercase | slice: 0: 5 }}</span>
+  <br/>
+
+  <span>{{ date }}</span>
+  <br/>
+
+  <span>{{ date | date }}</span>
+  <br/>
+
+  <span>{{ date | date: "medium" }}</span>
+  <br/>
+
+  <span>{{ date | date: "dd-MM-YY hh:mm:ss"}}</span>
+  <br/>
+
+  <span>{{ date | date: "MMM dd, yyyy 'в' HH:mm a" }}</span>
+  <br/>
+</div>
