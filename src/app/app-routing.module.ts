@@ -4,6 +4,7 @@ import {MyCalculatorComponent} from "./my-calculator/my-calculator.component";
 import {MyEmptyPage} from "./empty-route/my-empty-page.component";
 import {ParentComponent} from "./lifecycle/parent/parent.component";
 import {PostListComponent} from "./object-list/service/post-list/post-list.component";
+import {PipeItemComponent} from "./pipes/components/pipe-item/pipe-item.component";
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'lifecycles',
     component: ParentComponent
+  },
+  {
+    path: 'pipes',
+    component: PipeItemComponent
   },
   {
     path: '**',

@@ -10,6 +10,7 @@ import { MyEmptyPage } from './empty-route/my-empty-page.component';
 import { ChildComponent } from './lifecycle/child/child.component';
 import { ParentComponent } from './lifecycle/parent/parent.component';
 import {RequestModule} from "./object-list/service/request/request.module";
+import {PipesModule} from "./pipes/pipes/pipes.module";
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import {RequestModule} from "./object-list/service/request/request.module";
     AppRoutingModule,
     MMyCalculatorModule,
     RequestModule,
+    PipesModule,
     // HttpClientModule,
 
 
